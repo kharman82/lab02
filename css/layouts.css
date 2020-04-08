@@ -1,0 +1,30 @@
+header {
+    text-align: center;
+    margin: 45px;
+}
+
+
+img {
+    max-width: 250px;
+    max-height: 250px;
+}
+
+
+section {
+    width: 30%;
+    height: 350px;
+    float: left;
+    background: lightblue;
+    margin: 7px;
+
+    
+}
+
+#photo-template {
+    display: none;
+}
+
+footer {
+    clear: both;
+    text-align: center;
+}

@@ -1,4 +1,8 @@
 @import "reset.css";
+
+/*  Gooogle Fonts  */
+@import url('https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap');
+
 @import "base.css";
 @import "layouts.css";
 @import "modules.css";
