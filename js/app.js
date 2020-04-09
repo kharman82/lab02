@@ -1,23 +1,27 @@
 'use strict';
 
-const monstersArray = [];
-const keywordArray = [];
+let monstersArray = [];
+let keywordArray = [];
 
 //Grab the Monsters
-$.ajax('data/page-1.json', {method: 'GET', dataType: 'JSON'})
-    .then ( (data) => {
-        data.forEach( value => {
-             new Monster(value).render();
-            
-            if (!keywordArray.includes(value.keyword)){
-                keywordArray.push(value.keyword);
-            }
-        });
-    populateDropDown();
-});
+    function queryPage() {
+        keywordArray = [];
+        monstersArray = [];
+        console.log(keywordArray, monstersArray);
+        $.ajax(`./data/${pageNumber}.json`, {method: 'GET', dataType: 'JSON'})
+        .then ( (data) => {
+            data.forEach( value => {
+                new Monster(value).render();
+                console.log('hello', monstersArray.image_url);
 
-
-
+                if (!keywordArray.includes(value.keyword)){
+                    keywordArray.push(value.keyword);
+                }
+                console.log('hello', monstersArray.image_url);
+            });
+        populateDropDown();
+    });
+    }
 
 
 // Constructor function for our Monsters
@@ -49,7 +53,7 @@ Monster.prototype.render = function() {
 
 // Function for drop down menue to populate.
 function populateDropDown() {
-    keywordArray.forEach( (word) => {
+        keywordArray.forEach( (word) => {
         let $options = $('<option></option>');
         $options.text(word);
         $options.val(word);
@@ -71,3 +75,29 @@ function filterByKeyword(event) {
     });
 }
 $('select').change(filterByKeyword);
+
+
+// lkdsfsdklhg
+
+let pageNumber = 'page-1';
+
+function pageChanger(event){
+    event.preventDefault();
+    pageNumber = event.target.value;
+    console.log(pageNumber);
+    let oldMonster = $('section').not('#photo-template');
+    let oldKeyword = $('option');
+    $(oldMonster).remove();
+    $(oldKeyword).remove();
+
+
+    queryPage();
+}
+
+$('.next').on('click', pageChanger);
+queryPage();
+
+
+
+
+
