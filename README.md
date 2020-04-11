@@ -63,9 +63,9 @@ ______________________________________
 
 Number and name of feature: feature 2 Templating
 
-Estimate of time needed to complete:
+Estimate of time needed to complete: 1hr
 
-Start time: 
+Start time: 1130am
 
 Finish time: 
 
