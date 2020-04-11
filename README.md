@@ -4,6 +4,7 @@ jQuery Selectors and Events
 **Colaborators**  
 - Brandon Gibbs  
 - Kent Sheats  
+- Paul Depue  
 
 
 _______________________________________
@@ -52,7 +53,7 @@ Number and name of feature: feature 1: Pagination
 
 Estimate of time needed to complete: 2hr
 
-Start time: 
+Start time: 10am
 
 Finish time: 
 
