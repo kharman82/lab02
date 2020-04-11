@@ -1,0 +1,31 @@
+section {
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+
+    width: 30%;
+    height: auto;
+    background: rgb(66, 187, 228);
+    margin: 7px;
+    border-radius: 9px;
+    box-shadow: hotpink 4px 5px;
+    padding: 7px;
+}
+
+select {
+    width: 20%;
+    border-radius: 7px;
+    margin: 14px;
+}
+
+button {
+    width: 40%;
+    height: 35px;
+    border-radius: 7px;
+    margin: 14px;
+    background: rgb(205, 247, 22);
+}
+footer {
+    clear: both;
+    padding: 7px;
+}
